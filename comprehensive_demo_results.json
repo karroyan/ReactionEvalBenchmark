@@ -1,0 +1,380 @@
+{
+  "summary": {
+    "qa_accuracy": 0.2222222222222222,
+    "qa_total_questions": 18,
+    "qa_correct_answers": 4,
+    "completeness_score": 6.666666666666667,
+    "completeness_max_score": 16.0,
+    "precision_score": null,
+    "novelty_score": null,
+    "overall_score": 0.33333333333333337,
+    "summary": "模型综合评估结果：\n- 选择题准确率: 22.22% (4/18)\n- 完整性评分: 6.7/16.0 (41.7%)\n- 综合得分: 33.33%\n- 平均响应时间: 0.00秒"
+  },
+  "detailed_results": {
+    "qa_results": [
+      {
+        "question_id": 0,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/倒带-蔡依林.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌词“你总是要我乖 慢慢计划将来”对应的段落是什么段落？",
+        "options": [
+          "verse",
+          "chorus",
+          "bridge",
+          "pre-chorus"
+        ],
+        "correct_answer": "A",
+        "predicted_answer": "After careful listening, I believe the answer is A.",
+        "is_correct": true,
+        "response_time": 1.5497207641601562e-05,
+        "metadata": {}
+      },
+      {
+        "question_id": 1,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/如果爱忘了-汪苏泷、单依纯.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲时间1:39到1:57对应的段落是什么段落？",
+        "options": [
+          "verse",
+          "chorus",
+          "bridge",
+          "pre-chorus"
+        ],
+        "correct_answer": "C",
+        "predicted_answer": "After careful listening, I believe the answer is A.",
+        "is_correct": false,
+        "response_time": 3.337860107421875e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 2,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/我的秘密-GEM邓紫棋.flac",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌词“你总是要我乖 慢慢计划将来”对应的段落是什么段落？",
+        "options": [
+          "verse",
+          "chorus",
+          "bridge",
+          "pre-chorus"
+        ],
+        "correct_answer": "A",
+        "predicted_answer": "Based on the musical features, I think C is the right answer.",
+        "is_correct": false,
+        "response_time": 2.86102294921875e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 3,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/爱爱爱-方大同.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格",
+        "options": [
+          "Mandopop",
+          "hip-hop",
+          "EDM",
+          "R&B/Soul",
+          "Rock",
+          "Folk",
+          "Indie",
+          "OST",
+          "Chinese Style"
+        ],
+        "correct_answer": "D",
+        "predicted_answer": "My analysis suggests the correct choice is B.",
+        "is_correct": false,
+        "response_time": 2.6226043701171875e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 4,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/安和桥-宋冬野.flac",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格",
+        "options": [
+          "Mandopop",
+          "hip-hop",
+          "EDM",
+          "R&B/Soul",
+          "Rock",
+          "Folk",
+          "Indie",
+          "OST",
+          "Chinese Style"
+        ],
+        "correct_answer": "F",
+        "predicted_answer": "My analysis suggests the correct choice is B.",
+        "is_correct": false,
+        "response_time": 1.430511474609375e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 5,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/倔强-五月天.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格",
+        "options": [
+          "Mandopop",
+          "hip-hop",
+          "EDM",
+          "R&B/Soul",
+          "Rock",
+          "Folk",
+          "Indie",
+          "OST",
+          "Chinese Style"
+        ],
+        "correct_answer": "E",
+        "predicted_answer": "My analysis suggests the correct choice is B.",
+        "is_correct": false,
+        "response_time": 2.384185791015625e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 6,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/红色高跟鞋-蔡健雅.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于哪个声部",
+        "options": [
+          "Mezzo-Soprano",
+          "Lyric Soprano",
+          "Lyric Tenor",
+          "Bass-Baritone"
+        ],
+        "correct_answer": "A",
+        "predicted_answer": "After careful listening, I believe the answer is A.",
+        "is_correct": true,
+        "response_time": 2.384185791015625e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 7,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/香水百合-张韶涵.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于哪个声部",
+        "options": [
+          "Mezzo-Soprano",
+          "Coloratura Soprano",
+          "Lyric Tenor",
+          "Bass-Baritone"
+        ],
+        "correct_answer": "B",
+        "predicted_answer": "After careful listening, I believe the answer is A.",
+        "is_correct": false,
+        "response_time": 2.1457672119140625e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 8,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/11-GEM邓紫棋.flac",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于以下哪种音色特质",
+        "options": [
+          "Brilliant Timbre",
+          "Dark Timbre",
+          "Metallic Twang",
+          "Breathy Voice"
+        ],
+        "correct_answer": "C",
+        "predicted_answer": "The audio evidence points to option D.",
+        "is_correct": false,
+        "response_time": 2.6226043701171875e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 9,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/单身情歌-林志炫.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术",
+        "options": [
+          "Resonance Dominant",
+          "Vocal Fold Edge Vibration",
+          "Growl/ Distortion",
+          "Countertenor"
+        ],
+        "correct_answer": "A",
+        "predicted_answer": "After careful listening, I believe the answer is A.",
+        "is_correct": true,
+        "response_time": 1.9073486328125e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 10,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/2002年的第一场雪-刀郎.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术",
+        "options": [
+          "Resonance Dominant",
+          "Vocal Fold Edge Vibration",
+          "Growl/ Distortion",
+          "Countertenor"
+        ],
+        "correct_answer": "B",
+        "predicted_answer": "After careful listening, I believe the answer is A.",
+        "is_correct": false,
+        "response_time": 1.6689300537109375e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 11,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/离歌-信乐团.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术",
+        "options": [
+          "Resonance Dominant",
+          "Vocal Fold Edge Vibration",
+          "Growl/ Distortion",
+          "Countertenor"
+        ],
+        "correct_answer": "B",
+        "predicted_answer": "After careful listening, I believe the answer is A.",
+        "is_correct": false,
+        "response_time": 1.6689300537109375e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 12,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/安静-周杰伦.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪",
+        "options": [
+          "Melancholy",
+          "Nostalgia",
+          "Anxiety",
+          "Euphoria",
+          "Resentment"
+        ],
+        "correct_answer": "A",
+        "predicted_answer": "My analysis suggests the correct choice is B.",
+        "is_correct": false,
+        "response_time": 1.9073486328125e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 13,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/词不达意-林忆莲.flac",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪",
+        "options": [
+          "Melancholy",
+          "Nostalgia",
+          "Anxiety",
+          "Euphoria",
+          "Resentment"
+        ],
+        "correct_answer": "B",
+        "predicted_answer": "My analysis suggests the correct choice is B.",
+        "is_correct": true,
+        "response_time": 1.430511474609375e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 14,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/私奔到月球-五月天_陈绮贞.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪",
+        "options": [
+          "Melancholy",
+          "Nostalgia",
+          "Anxiety",
+          "Euphoria",
+          "Resentment"
+        ],
+        "correct_answer": "D",
+        "predicted_answer": "After careful listening, I believe the answer is A.",
+        "is_correct": false,
+        "response_time": 1.9073486328125e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 15,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/可惜没如果-林俊杰.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格",
+        "options": [
+          "Ballad",
+          "EDM-Chinese Fusion",
+          "Cantopop Urban",
+          "Dialect Rock",
+          "Trap-Mandopop",
+          "Band Sound",
+          "Bedroom Folk",
+          "Cinematic Orchestration"
+        ],
+        "correct_answer": "A",
+        "predicted_answer": "My analysis suggests the correct choice is B.",
+        "is_correct": false,
+        "response_time": 1.6689300537109375e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 16,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/富士山下-陈奕迅.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格",
+        "options": [
+          "Ballad",
+          "EDM-Chinese Fusion",
+          "Cantopop Urban",
+          "Dialect Rock",
+          "Trap-Mandopop",
+          "Band Sound",
+          "Bedroom Folk",
+          "Cinematic Orchestration"
+        ],
+        "correct_answer": "C",
+        "predicted_answer": "The audio evidence points to option D.",
+        "is_correct": false,
+        "response_time": 2.1457672119140625e-06,
+        "metadata": {}
+      },
+      {
+        "question_id": 17,
+        "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/花田错-王力宏-SonyEricssonW900i广告主题曲.mp3",
+        "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格",
+        "options": [
+          "Ballad",
+          "EDM-Chinese Fusion",
+          "Cantopop Urban",
+          "Dialect Rock",
+          "Trap-Mandopop",
+          "Band Sound",
+          "Bedroom Folk",
+          "Cinematic Orchestration"
+        ],
+        "correct_answer": "H",
+        "predicted_answer": "My analysis suggests the correct choice is B.",
+        "is_correct": false,
+        "response_time": 1.6689300537109375e-06,
+        "metadata": {}
+      }
+    ],
+    "completeness_details": {
+      "average_total_score": 6.666666666666667,
+      "individual_scores": [
+        7.0,
+        7.0,
+        9.0,
+        7.0,
+        7.0,
+        3.0,
+        7.0,
+        8.0,
+        3.5,
+        5.0,
+        9.0,
+        3.5,
+        9.0,
+        7.0,
+        3.0,
+        9.0,
+        8.0,
+        8.0
+      ],
+      "assessments": [
+        "对吉他编曲和段落变化有清晰描述，语言简洁；  \n缺点：缺乏曲风判断、背景关联及人设体现，语言感染力较弱。  \n（无明显人设，偏向客观器乐分析。）",
+        "对吉他编曲和段落变化的描述清晰，能概括歌曲情绪；缺点：缺乏曲风判断、背景关联和鲜明人设，语言表达稍显平淡。无人设特点体现。",
+        "对吉他编曲和情绪传达的描述清晰，语言自然；缺点：缺乏曲风判断、歌手关联及人设定位，背景分析较单薄。无人设特点，偏向客观听感描述。",
+        "对吉他编曲和段落变化有清晰描述，从听众角度提出适用场景；缺点：缺乏曲风判断、背景关联及人设特点，语言表达稍显平淡。无人设类型体现。",
+        "对吉他编曲和段落变化的描述清晰，能结合听众场景（背景音乐）展开联想。  \n缺点：缺乏曲风判断、背景关联和情绪化表达，人设不鲜明。建议补充风格标签（如后摇、氛围音乐）并增加主观感受描述（如「效果器的空间感像置身宇宙」）。",
+        "对吉他编曲细节的描述较清晰；缺点：缺乏曲风判断、背景关联、人设及主观表达，语言感染力不足。无人设类型体现，整体分析较浅层。",
+        "对器乐编排和段落变化的描述清晰，能结合听众场景共情；  \n缺点：缺乏曲风判断、背景关联和鲜明人设，语言表达稍显平淡。  \n（无显著人设，偏向客观描述型评价）",
+        "对音乐段落和编曲细节描述清晰，语言自然流畅；  \n缺点：缺乏曲风判断、背景关联及人设表达，对器乐曲的「演奏表现」维度未展开。  \n（无明显人设，偏向客观描述型乐评）",
+        "对吉他音色和歌曲氛围的描述较清晰，适合作为音乐背景分析。  \n缺点：缺乏歌手表现、背景关联、主观表达等关键维度内容，语言感染力一般，无明确人设。",
+        "该评价对歌曲的编曲和段落变化有一定分析，但缺乏对曲风、背景、人设的深入探讨，语言表达偏客观，整体较为平淡。未体现特定人设或强烈主观倾向。",
+        "这段评价对歌曲的编曲和情感变化有较好的描述，但在音乐风格、段落结构、人设和背景关联性方面较为薄弱，语言表达也缺乏感染力。整体偏向客观分析，未形成鲜明的人设特点。",
+        "对吉他编曲细节描述较清晰，语言通顺；  \n缺点：缺乏曲风判断、背景关联、人设及主观表达，情绪感染力不足。",
+        "对编曲细节和歌曲氛围的描述较准确，语言表达流畅。  \n缺点：缺乏对风格、人设、背景信息的深入分析，主观情感表达较弱。  \n人设类型：普通听众视角，无明显特色。",
+        "对吉他音色和歌曲结构有基本分析，能概括歌曲情绪；缺点：缺乏曲风判断、背景关联和鲜明人设，语言表达偏客观。",
+        "这段评价对器乐曲的编曲细节有一定描述，但缺乏对音乐风格、背景关联、人设和主观表达的深入分析，语言表达也较为平淡。无明显人设特点，整体内容较为单薄。",
+        "对吉他编曲细节和情绪变化有较清晰的描述，语言表达流畅自然。  \n缺点：缺乏明确的段落识别、风格标注、歌手背景和深入的主观表达，人设感较弱。",
+        "对音乐段落和编曲细节描述清晰，语言表达自然；缺点：缺乏曲风判断、背景关联及人设体现，整体分析较浅。无人设特点。",
+        "对吉他编曲和情绪传达的描述具体，语言自然；缺点：缺乏段落识别、曲风判断和背景关联，人设模糊。整体偏向基础听感分享，未深入音乐分析或建立鲜明评价视角。"
+      ]
+    },
+    "precision_details": null,
+    "novelty_details": null
+  }
+}

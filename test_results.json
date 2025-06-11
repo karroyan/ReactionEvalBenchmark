@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "total_questions": 1,
+    "correct_answers": 0,
+    "average_response_time": 8.821487426757812e-06
+  },
+  "detailed_results": [
+    {
+      "question_id": 0,
+      "audio_path": "/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/songs/倒带-蔡依林.mp3",
+      "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌词“你总是要我乖 慢慢计划将来”对应的段落是什么段落？",
+      "options": [
+        "verse",
+        "chorus",
+        "bridge",
+        "pre-chorus"
+      ],
+      "correct_answer": "A",
+      "predicted_answer": "C",
+      "is_correct": false,
+      "response_time": 8.821487426757812e-06,
+      "metadata": {}
+    }
+  ]
+}
