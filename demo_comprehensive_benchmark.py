@@ -2,7 +2,7 @@
 import random
 from typing import List
 from music_appraisal_benchmark import run_comprehensive_benchmark
-
+# export PYTHONPATH=./:$PYTHONPATH
 
 def demo_qa_model(audio_path: str, question: str, options: List[str]) -> str:
     """
@@ -43,7 +43,7 @@ def demo_appraisal_model(audio_path: str) -> str:
     #     """这首《倒带》是蔡依林演唱的歌曲，音乐风格属于流行类型。歌曲的编曲比较不错，蔡依林的演唱也很专业。
     #         这首歌表达了对回忆的怀念，是一首比较经典的作品。整体听起来很舒服，是一首值得推荐的好歌。"""
     # ]
-    appraisals = ["这首歌是一首器乐曲，主要特色是吉他。吉他在曲目中扮演了主导的角色，用不同效果器处理过的声音创造出独特的氛围。从柔和而梦幻的开头逐渐过渡到更加强烈和有力的部分，展示了吉他的变化和魅力。整体而言，这首歌给人的感觉非常宏大和激励人心，适合做某种系列节目的背景音乐。"]
+    appraisals = ["""这段音频是一首流行抒情曲目。曲调为D#小调，节奏为118 BPM，采用了4/4拍子。这首歌曲以D#小调和大调和弦反复出现，营造出一种忧郁而又希望的氛围。此外，歌曲还包含了一些人声样本和弦乐，增加了音乐的表现力。总体而言，这首歌适合在需要表达复杂情感的时候聆听。"""]
 
     # Randomly select an appraisal to test different novelty levels
     return random.choice(appraisals)
@@ -67,9 +67,9 @@ def main():
         result = run_comprehensive_benchmark(
             qa_model_function=demo_qa_model,
             appraisal_model_function=demo_appraisal_model,
-            qa_data_path="/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/data/option_qa.jsonl",
+            qa_data_path="data/option_qa.jsonl",
             song_details_path="data/song_details.jsonl",
-            output_path="/fs-computility/niuyazhe/lixueyan/acapella/eval_benchmark/comprehensive_demo_results.json",
+            output_path="comprehensive_demo_results.json",
             enable_precision_eval=True,  # Enable precision evaluation
             enable_novelty_eval=True     # Enable novelty evaluation
         )

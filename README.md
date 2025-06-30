@@ -24,6 +24,7 @@ This benchmark system evaluates music appraisal models through four complementar
 ### Basic Usage
 
 ```python
+from typing import List
 from music_appraisal_benchmark import run_comprehensive_benchmark
 
 # Define your model functions
@@ -108,7 +109,7 @@ ReactionEvalBenchmark/
 
 ```bash
 # Core dependencies
-pip install openai numpy
+pip install -r requirements.txt
 ```
 
 ### Environment Setup

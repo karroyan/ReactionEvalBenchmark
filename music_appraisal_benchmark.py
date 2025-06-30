@@ -156,26 +156,79 @@ class MusicAppraisalBenchmark:
         )
         
         # 2. Evaluate completeness using LLM
-        print("\n2. Evaluating appraisal completeness...")
         completeness_results = []
         precision_results = []
         novelty_results = []
         
-        for qa_item in self.qa_benchmark.qa_items:
+        # for qa_item in self.qa_benchmark.qa_items:
+        #     try:
+        #         # Generate appraisal for each audio file
+        #         appraisal_text = appraisal_model_function(qa_item.audio_path)
+                
+        #         # Get song details if available
+        #         song_info = self.song_details.get(qa_item.audio_path)
+                
+        #         # Evaluate completeness
+        #         completeness_result = self.llm_evaluator.evaluate_appraisal(
+        #             appraisal_text)   
+        #         completeness_results.append({
+        #             'audio_path': qa_item.audio_path,
+        #             'appraisal_text': appraisal_text,
+        #             'completeness_result': completeness_result,
+        #             'song_info': song_info
+        #         })
+                
+        #         # 3. Evaluate precision if enabled and ground truth available
+        #         if enable_precision_eval and song_info:
+        #             print(f"   Evaluating precision for {os.path.basename(qa_item.audio_path)}...")
+        #             breakpoint()
+        #             precision_result = self.precision_evaluator.evaluate_precision(
+        #                 appraisal_text, song_info
+        #             )
+        #             breakpoint()
+                    
+        #             precision_results.append({
+        #                 'audio_path': qa_item.audio_path,
+        #                 'precision_result': precision_result,
+        #                 'song_info': song_info
+        #             })
+                
+        #         # 4. Evaluate novelty if enabled and ground truth available
+        #         if enable_novelty_eval and song_info:
+        #             print(f"   Evaluating novelty for {os.path.basename(qa_item.audio_path)}...")
+        #             novelty_result = self.novelty_evaluator.evaluate_novelty(
+        #                 appraisal_text, song_info
+        #             )
+                    
+        #             novelty_results.append({
+        #                 'audio_path': qa_item.audio_path,
+        #                 'novelty_result': novelty_result,
+        #                 'song_info': song_info
+        #             })
+                
+        #     except Exception as e:
+        #         print(f"Error evaluating {qa_item.audio_path}: {e}")
+        #         continue
+
+        audio_paths = []
+        with open("data/song_details.jsonl", "r", encoding="utf-8") as f:
+            for line in f:
+                song_data = json.loads(line)
+                audio_paths.append(song_data["audio_path"])
+        for audio_path in audio_paths: 
             try:
                 # Generate appraisal for each audio file
-                appraisal_text = appraisal_model_function(qa_item.audio_path)
+                appraisal_text = appraisal_model_function(audio_path)
                 
                 # Get song details if available
-                song_info = self.song_details.get(qa_item.audio_path)
+                song_info = self.song_details.get(audio_path)
                 
                 # Evaluate completeness
+                print("\n2. Evaluating appraisal completeness...")
                 completeness_result = self.llm_evaluator.evaluate_appraisal(
-                    appraisal_text
-                )
-                
+                    appraisal_text)   
                 completeness_results.append({
-                    'audio_path': qa_item.audio_path,
+                    'audio_path': audio_path,
                     'appraisal_text': appraisal_text,
                     'completeness_result': completeness_result,
                     'song_info': song_info
@@ -183,34 +236,33 @@ class MusicAppraisalBenchmark:
                 
                 # 3. Evaluate precision if enabled and ground truth available
                 if enable_precision_eval and song_info:
-                    print(f"   Evaluating precision for {os.path.basename(qa_item.audio_path)}...")
+                    print(f"   Evaluating precision for {os.path.basename(audio_path)}...")
                     precision_result = self.precision_evaluator.evaluate_precision(
                         appraisal_text, song_info
                     )
-                    
                     precision_results.append({
-                        'audio_path': qa_item.audio_path,
+                        'audio_path': audio_path,
                         'precision_result': precision_result,
                         'song_info': song_info
                     })
                 
                 # 4. Evaluate novelty if enabled and ground truth available
                 if enable_novelty_eval and song_info:
-                    print(f"   Evaluating novelty for {os.path.basename(qa_item.audio_path)}...")
+                    print(f"   Evaluating novelty for {os.path.basename(audio_path)}...")
                     novelty_result = self.novelty_evaluator.evaluate_novelty(
                         appraisal_text, song_info
                     )
                     
                     novelty_results.append({
-                        'audio_path': qa_item.audio_path,
+                        'audio_path': audio_path,
                         'novelty_result': novelty_result,
                         'song_info': song_info
                     })
                 
             except Exception as e:
-                print(f"Error evaluating {qa_item.audio_path}: {e}")
+                print(f"Error evaluating {audio_path}: {e}")
                 continue
-        
+
         # Calculate average completeness scores
         if completeness_results:
             avg_completeness_score = sum(r['completeness_result'].total_score 
@@ -417,10 +469,10 @@ class MusicAppraisalBenchmark:
         novelty_text = f"\n- 新颖性得分: {novelty_score:.2%}" if novelty_score is not None else ""
         
         return f"""模型综合评估结果：
-- 选择题准确率: {qa_result.accuracy:.2%} ({qa_result.correct_answers}/{qa_result.total_questions})
-- 完整性评分: {completeness_score:.1f}/16.0 ({completeness_score/16*100:.1f}%){precision_text}{novelty_text}
-- 综合得分: {overall_score:.2%}
-- 平均响应时间: {qa_result.average_response_time:.2f}秒"""
+                - 选择题准确率: {qa_result.accuracy:.2%} ({qa_result.correct_answers}/{qa_result.total_questions})
+                - 完整性评分: {completeness_score:.1f}/16.0 ({completeness_score/16*100:.1f}%){precision_text}{novelty_text}
+                - 综合得分: {overall_score:.2%}
+                - 平均响应时间: {qa_result.average_response_time:.2f}秒"""
     
     def save_results(self, result: ComprehensiveEvaluationResult, output_path: str):
         """Save comprehensive evaluation results to JSON file."""

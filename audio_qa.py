@@ -61,8 +61,8 @@ class AudioQABenchmark:
                     
                     # Handle relative and absolute paths
                     audio_path = data['audio_path']
-                    if not os.path.isabs(audio_path):
-                        audio_path = self.audio_base_path / audio_path
+                    # if not os.path.isabs(audio_path):
+                    #     audio_path = self.audio_base_path / audio_path
                     
                     qa_item = QAItem(
                         audio_path=str(audio_path),
