@@ -85,6 +85,9 @@ def main():
         print(f"📊 Question Answering Performance:")
         print(f"   - Accuracy: {result.qa_accuracy:.1%}")
         print(f"   - Questions answered: {result.qa_correct_answers}/{result.qa_total_questions}")
+
+        print(f"📝 Appraisal Text:")
+        print(f"   - {result.appraisal_text}")
         
         print(f"\n📝 Completeness Evaluation:")
         print(f"   - Score: {result.completeness_score:.1f}/16.0")

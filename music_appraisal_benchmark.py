@@ -32,6 +32,9 @@ class ComprehensiveEvaluationResult:
     qa_total_questions: int
     qa_correct_answers: int
     qa_detailed_results: List[Dict[str, Any]]
+
+    # Appraisal text
+    appraisal_text: str
     
     # LLM completeness scoring results
     completeness_score: float
@@ -43,7 +46,7 @@ class ComprehensiveEvaluationResult:
     precision_score: Optional[float] = None
     precision_details: Optional[Dict[str, Any]] = None
     
-    # Novelty results ✨ NEW
+    # Novelty results
     novelty_score: Optional[float] = None
     novelty_details: Optional[Dict[str, Any]] = None
     
@@ -317,6 +320,7 @@ class MusicAppraisalBenchmark:
             qa_total_questions=qa_result.total_questions,
             qa_correct_answers=qa_result.correct_answers,
             qa_detailed_results=qa_result.detailed_results,
+            appraisal_text=appraisal_text,
             completeness_score=avg_completeness_score,
             completeness_max_score=avg_completeness_max,
             completeness_details=aggregated_details,
@@ -481,6 +485,7 @@ class MusicAppraisalBenchmark:
                 'qa_accuracy': result.qa_accuracy,
                 'qa_total_questions': result.qa_total_questions,
                 'qa_correct_answers': result.qa_correct_answers,
+                'appraisal_text': result.appraisal_text,
                 'completeness_score': result.completeness_score,
                 'completeness_max_score': result.completeness_max_score,
                 'precision_score': result.precision_score,

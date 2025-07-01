@@ -3,12 +3,13 @@
     "qa_accuracy": 0.3055555555555556,
     "qa_total_questions": 36,
     "qa_correct_answers": 11,
-    "completeness_score": 5.0,
+    "appraisal_text": "这段音频是一首流行抒情曲目。曲调为D#小调，节奏为118 BPM，采用了4/4拍子。这首歌曲以D#小调和大调和弦反复出现，营造出一种忧郁而又希望的氛围。此外，歌曲还包含了一些人声样本和弦乐，增加了音乐的表现力。总体而言，这首歌适合在需要表达复杂情感的时候聆听。",
+    "completeness_score": 5.666666666666667,
     "completeness_max_score": 16.0,
-    "precision_score": 0.16556666666666667,
+    "precision_score": 0.22223333333333337,
     "novelty_score": 0.5,
-    "overall_score": 0.29978000000000005,
-    "summary": "模型综合评估结果：\n                - 选择题准确率: 30.56% (11/36)\n                - 完整性评分: 5.0/16.0 (31.2%)\n- 事实准确率: 16.56%\n- 新颖性得分: 50.00%\n                - 综合得分: 29.98%\n                - 平均响应时间: 0.00秒"
+    "overall_score": 0.32778000000000007,
+    "summary": "模型综合评估结果：\n                - 选择题准确率: 30.56% (11/36)\n                - 完整性评分: 5.7/16.0 (35.4%)\n- 事实准确率: 22.22%\n- 新颖性得分: 50.00%\n                - 综合得分: 32.78%\n                - 平均响应时间: 0.00秒"
   },
   "detailed_results": {
     "qa_results": [
@@ -25,7 +26,7 @@
         "correct_answer": "A",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": true,
-        "response_time": 1.33514404296875e-05,
+        "response_time": 1.1682510375976562e-05,
         "metadata": {}
       },
       {
@@ -41,7 +42,7 @@
         "correct_answer": "C",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": false,
-        "response_time": 5.245208740234375e-06,
+        "response_time": 2.86102294921875e-06,
         "metadata": {}
       },
       {
@@ -57,7 +58,7 @@
         "correct_answer": "A",
         "predicted_answer": "Based on the musical features, I think C is the right answer.",
         "is_correct": false,
-        "response_time": 3.5762786865234375e-06,
+        "response_time": 2.6226043701171875e-06,
         "metadata": {}
       },
       {
@@ -78,7 +79,7 @@
         "correct_answer": "D",
         "predicted_answer": "My analysis suggests the correct choice is B.",
         "is_correct": false,
-        "response_time": 2.86102294921875e-06,
+        "response_time": 2.1457672119140625e-06,
         "metadata": {}
       },
       {
@@ -99,7 +100,7 @@
         "correct_answer": "F",
         "predicted_answer": "My analysis suggests the correct choice is B.",
         "is_correct": false,
-        "response_time": 2.384185791015625e-06,
+        "response_time": 1.6689300537109375e-06,
         "metadata": {}
       },
       {
@@ -120,7 +121,7 @@
         "correct_answer": "E",
         "predicted_answer": "My analysis suggests the correct choice is B.",
         "is_correct": false,
-        "response_time": 4.291534423828125e-06,
+        "response_time": 2.6226043701171875e-06,
         "metadata": {}
       },
       {
@@ -136,7 +137,7 @@
         "correct_answer": "A",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": true,
-        "response_time": 2.1457672119140625e-06,
+        "response_time": 2.384185791015625e-06,
         "metadata": {}
       },
       {
@@ -152,7 +153,7 @@
         "correct_answer": "B",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": false,
-        "response_time": 2.384185791015625e-06,
+        "response_time": 2.1457672119140625e-06,
         "metadata": {}
       },
       {
@@ -168,7 +169,7 @@
         "correct_answer": "C",
         "predicted_answer": "The audio evidence points to option D.",
         "is_correct": false,
-        "response_time": 2.384185791015625e-06,
+        "response_time": 2.1457672119140625e-06,
         "metadata": {}
       },
       {
@@ -184,7 +185,7 @@
         "correct_answer": "A",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": true,
-        "response_time": 2.1457672119140625e-06,
+        "response_time": 1.6689300537109375e-06,
         "metadata": {}
       },
       {
@@ -216,7 +217,7 @@
         "correct_answer": "B",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": false,
-        "response_time": 1.430511474609375e-06,
+        "response_time": 1.1920928955078125e-06,
         "metadata": {}
       },
       {
@@ -233,7 +234,7 @@
         "correct_answer": "A",
         "predicted_answer": "My analysis suggests the correct choice is B.",
         "is_correct": false,
-        "response_time": 1.6689300537109375e-06,
+        "response_time": 1.430511474609375e-06,
         "metadata": {}
       },
       {
@@ -267,7 +268,7 @@
         "correct_answer": "D",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": false,
-        "response_time": 1.6689300537109375e-06,
+        "response_time": 1.430511474609375e-06,
         "metadata": {}
       },
       {
@@ -307,7 +308,7 @@
         "correct_answer": "C",
         "predicted_answer": "The audio evidence points to option D.",
         "is_correct": false,
-        "response_time": 1.6689300537109375e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -341,7 +342,7 @@
         "correct_answer": "A",
         "predicted_answer": "The audio evidence points to option D.",
         "is_correct": false,
-        "response_time": 1.9073486328125e-06,
+        "response_time": 1.6689300537109375e-06,
         "metadata": {}
       },
       {
@@ -357,7 +358,7 @@
         "correct_answer": "C",
         "predicted_answer": "Based on the musical features, I think C is the right answer.",
         "is_correct": true,
-        "response_time": 2.1457672119140625e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -373,7 +374,7 @@
         "correct_answer": "D",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": false,
-        "response_time": 2.1457672119140625e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -405,7 +406,7 @@
         "correct_answer": "A",
         "predicted_answer": "The audio evidence points to option D.",
         "is_correct": false,
-        "response_time": 1.6689300537109375e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -437,7 +438,7 @@
         "correct_answer": "C",
         "predicted_answer": "Based on the musical features, I think C is the right answer.",
         "is_correct": true,
-        "response_time": 1.6689300537109375e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -485,7 +486,7 @@
         "correct_answer": "B",
         "predicted_answer": "Based on the musical features, I think C is the right answer.",
         "is_correct": false,
-        "response_time": 2.384185791015625e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -533,7 +534,7 @@
         "correct_answer": "B",
         "predicted_answer": "The audio evidence points to option D.",
         "is_correct": false,
-        "response_time": 1.430511474609375e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -549,7 +550,7 @@
         "correct_answer": "C",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": false,
-        "response_time": 1.6689300537109375e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -565,7 +566,7 @@
         "correct_answer": "B",
         "predicted_answer": "Based on the musical features, I think C is the right answer.",
         "is_correct": false,
-        "response_time": 1.9073486328125e-06,
+        "response_time": 1.6689300537109375e-06,
         "metadata": {}
       },
       {
@@ -581,7 +582,7 @@
         "correct_answer": "C",
         "predicted_answer": "Based on the musical features, I think C is the right answer.",
         "is_correct": true,
-        "response_time": 2.1457672119140625e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -597,7 +598,7 @@
         "correct_answer": "C",
         "predicted_answer": "Based on the musical features, I think C is the right answer.",
         "is_correct": true,
-        "response_time": 1.6689300537109375e-06,
+        "response_time": 1.9073486328125e-06,
         "metadata": {}
       },
       {
@@ -613,63 +614,58 @@
         "correct_answer": "A",
         "predicted_answer": "After careful listening, I believe the answer is A.",
         "is_correct": true,
-        "response_time": 1.430511474609375e-06,
+        "response_time": 1.6689300537109375e-06,
         "metadata": {}
       }
     ],
     "completeness_details": {
-      "average_total_score": 5.0,
+      "average_total_score": 5.666666666666667,
       "individual_scores": [
-        5.0,
-        5.0,
-        5.0
+        7.0,
+        4.0,
+        6.0
       ],
       "assessments": [
-        "这段评价内容在音乐分析（如和弦、曲风）上表现尚可，但缺乏对歌手表现、背景关联、人设及主观表达的深入探讨，语言也较为平淡，未形成鲜明特点。建议增加具体细节（如段落划分、演唱技巧）和情感化表达以提升感染力。",
-        "这段评价在音乐分析（如和弦进行、编曲细节）上表现尚可，但缺乏段落识别、歌手表现、背景关联和主观表达，语言也较为平淡。整体偏向技术性描述，未形成鲜明人设或情感共鸣。建议增加对歌手音色、演唱技巧的点评，并融入更多个人感受或背景故事。",
-        "这段评价内容在音乐技术分析（调性、BPM、编曲）方面有一定专业性，但缺乏对歌手表现、背景故事、人设塑造的深入探讨，语言表达也偏平淡。适合作为客观技术解析，但作为Reaction评价感染力不足。"
+        "这段评价在音乐理解部分表现较好，尤其是作曲手法和编曲细节的分析，但在歌手表现、背景关联、人设类型和语言表达上较为薄弱。整体风格偏向技术性描述，缺乏情感共鸣和主观视角，未塑造明确人设。",
+        "这段评价内容在音乐分析（和弦、曲风）上有一定专业性，但缺乏段落识别、歌手表现、背景关联和主观表达，语言也过于书面化，未体现人设或感染力。适合作为技术性乐评片段，但需补充更多情感和背景信息。",
+        "音乐理论分析较准确（如调性、和弦），但缺乏段落识别、歌手表现和背景关联；缺点：语言偏技术报告风格，无明确人设和主观表达，感染力不足。可归类为「技术流基础分析」，需补充情感化表达和背景信息。"
       ]
     },
     "precision_details": {
-      "total_claims": 18,
+      "total_claims": 14,
       "total_correct_claims": 2,
       "total_incorrect_claims": 3,
-      "overall_precision": 0.1111111111111111,
+      "overall_precision": 0.14285714285714285,
       "individual_scores": [
+        0.5,
         0.0,
-        0.33,
         0.16670000000000001
       ],
-      "average_score": 0.16556666666666667,
+      "average_score": 0.22223333333333337,
       "claim_breakdown": [
         {
           "audio_path": "songs/告五人 - 爱人错过.mp3",
-          "claim": "1. 流行抒情曲目 - **错误**（真实风格为流行摇滚）",
+          "claim": "- **判定**：部分错误（风格描述不完整）",
           "is_correct": false
         },
         {
-          "audio_path": "songs/believer.mp3",
-          "claim": "1. 流行抒情曲目 - 错误（真实风格为摇滚/电子摇滚）",
-          "is_correct": false
-        },
-        {
-          "audio_path": "songs/believer.mp3",
-          "claim": "6. 包含人声样本和弦乐 - 部分正确（电子摇滚风格可能含合成器音效，但未明确提及弦乐）",
+          "audio_path": "songs/告五人 - 爱人错过.mp3",
+          "claim": "- **判定**：部分正确（氛围描述与主题一致，但和弦信息无法验证）",
           "is_correct": true
         },
         {
           "audio_path": "songs/believer.mp3",
-          "claim": "7. 忧郁而又希望的氛围 - 主观描述（与\"痛苦与自我超越\"主题部分吻合但不构成事实错误）",
+          "claim": "1. 评价称“这段音频是一首流行抒情曲目” - **错误**（真实风格为摇滚/电子摇滚）",
           "is_correct": false
         },
         {
           "audio_path": "songs/李白_单依纯.mp3",
-          "claim": "1. 流行抒情曲目 - 错误（真实风格为电子国风/实验流行）",
+          "claim": "1. \"这段音频是一首流行抒情曲目。\" - 错误（真实风格为电子国风/实验流行）",
           "is_correct": false
         },
         {
           "audio_path": "songs/李白_单依纯.mp3",
-          "claim": "6. 包含人声样本和弦乐 - 部分正确（真实信息提到实验性唱腔和电子/摇滚元素，未明确提及弦乐）",
+          "claim": "6. \"歌曲还包含了一些人声样本和弦乐\" - 部分正确（真实信息包含实验性唱腔和电子元素，但未明确提及弦乐）",
           "is_correct": true
         }
       ],
@@ -679,8 +675,8 @@
       "avg_music_relevance_score": 0.6666666666666666,
       "avg_depth_score": 0.4444444444444444,
       "avg_personal_insight_score": 0.0,
-      "total_novel_statements": 15,
-      "total_music_related_statements": 15,
+      "total_novel_statements": 13,
+      "total_music_related_statements": 13,
       "music_relevance_ratio": 1.0,
       "novel_content_categories": {
         "personal_reactions": [],
@@ -698,9 +694,9 @@
       },
       "files_evaluated": 3,
       "individual_scores": [
-        0.0,
         0.75,
-        0.75
+        0.75,
+        0.0
       ]
     }
   }
