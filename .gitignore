@@ -1,3 +1,10 @@
 ./songs/*
 ./text*
 *.json
+script/run*
+script/mmau_model*
+qwen_omni_utils/
+script/result*
+*.sh
+script/test_mmau.py
+script/model_to_test.py

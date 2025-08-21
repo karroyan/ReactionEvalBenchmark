@@ -3,50 +3,99 @@ import random
 from typing import List
 from music_appraisal_benchmark import run_comprehensive_benchmark
 # export PYTHONPATH=./:$PYTHONPATH
+import librosa
+from transformers import Qwen2AudioForConditionalGeneration, AutoProcessor
 
 def demo_qa_model(audio_path: str, question: str, options: List[str]) -> str:
-    """
-    A sample of answer to qa question
-    """
-    # For demo purposes, use some simple heuristics
-    question_lower = question.lower()
+
+    processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct")
+    model = Qwen2AudioForConditionalGeneration.from_pretrained("/fs-computility/niuyazhe/lixueyan/zj/Qwen2-Audio/Qwen2-Audio-7B-Instruct", device_map="auto")
+
     
-    answers = [
-        "After careful listening, I believe the answer is A.",
-        "My analysis suggests the correct choice is B.",
-        "Based on the musical features, I think C is the right answer.",
-        "The audio evidence points to option D."
+    user_prompt = f"根据<|AUDIO|>。阅读{question}，选出{options}中正确的选项。"
+    system_prompt=open("/fs-computility/niuyazhe/lixueyan/acapella/ReactionEvalBenchmark/prompt/model_qa_sysp.txt", "r").read()
+
+    conversation = [
+        {'role': 'system', 'content': system_prompt},
+        {'role': 'user', 'content': [
+            {"type": "audio", "audio_path": audio_path},
+            {"type": "text", "text": user_prompt},
+        ]},
     ]
-    return random.choice(answers)
+
+    text = processor.apply_chat_template(conversation, add_generation_prompt=True, tokenize=False)
+    # 读取本地音频
+    audio, _ = librosa.load(audio_path, sr=processor.feature_extractor.sampling_rate)
+    audios = [audio]
+
+    inputs = processor(text=text, audios=audio, return_tensors="pt", padding=True)
+    # 获取模型所在设备
+    device = next(model.parameters()).device
+    # 将所有张量转到模型所在设备
+    for k, v in inputs.items():
+        if hasattr(v, "to"):
+            inputs[k] = v.to(device)
+
+    generate_ids = model.generate(**inputs, max_new_tokens=1024)
+    generate_ids = generate_ids[:, inputs["input_ids"].size(1):]
+
+    response = processor.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
+    return response
+    
+    # answers = [
+    #     "After careful listening, I believe the answer is A.",
+    #     "My analysis suggests the correct choice is B.",
+    #     "Based on the musical features, I think C is the right answer.",
+    #     "The audio evidence points to option D."
+    # ]
+    # return random.choice(answers)
 
 
 def demo_appraisal_model(audio_path: str) -> str:
-    """
-    A sample of answer to reaction question
-    """
-    # Generate different types of appraisals to test all evaluation components
-    # appraisals = [
-    #     # High quality appraisal
-    #     """这首《倒带》是蔡依林在2004年发布的经典作品，收录在她的专辑《城堡》中。但这首歌对我来说不仅仅是一首流行歌曲，它像是一台情感的时光机。
-    #         听到这首歌的第一秒，我就仿佛被带回到了那个青涩的年代。蔡依林的声音在这里有种特殊的温柔，就像丝绸划过水面一样顺滑，又带着一种淡淡的忧郁。特别是副歌部分"如果时间能够倒带"，她的音色仿佛在耳边轻抚，让人不禁想起自己的初恋回忆。
-    #         从制作角度来说，这首歌的编曲层次非常丰富。鼓点的处理特别巧妙，每一下击打都像心跳一样规律而深沉，但又不会抢夺人声的风头。弦乐的运用更是画龙点睛，在关键的情感转折处，那些弦乐就像眼泪一样缓缓流淌下来。
-    #         我觉得这首歌和王菲的《红豆》有异曲同工之妙，都是用简单的旋律承载复杂的情感。但《倒带》更多了一种青春的躁动，那种想要重新来过但又无能为力的矛盾心情，被表达得淋漓尽致。
-    #         从文化角度来看，这首歌出现在2004年，正好是华语流行音乐黄金时代的尾声。它既保留了90年代情歌的深沉，又融入了新世纪的制作理念，可以说是承上启下的经典之作。
-    #         每次听到这首歌，我都会想起那个下着小雨的傍晚，我和朋友在KTV里一遍遍地循环播放，那种青春的美好和遗憾交织在一起的感觉，就像歌词里说的那样，真希望时间能够倒带。""",
-        
-    #     # Medium novelty
-    #     """蔡依林的《倒带》确实是她转型期的代表作之一。这首歌在2004年推出时，我还在上高中，当时就觉得这首歌有种特别的魅力。
-    #         音乐制作上，整首歌的编曲很精致，特别是鼓点的设计很有层次感。蔡依林的演唱技巧在这首歌中展现得很好，她的音色既清甜又有一定的成熟度。
-    #         歌曲的主题关于回忆和时光倒流，很容易引起听众的共鸣。我觉得这首歌比她之前的一些作品更有深度，在情感表达上有了明显的提升。整体来说是一首很成功的流行歌曲。""",
-        
-    #     # Low novelty
-    #     """这首《倒带》是蔡依林演唱的歌曲，音乐风格属于流行类型。歌曲的编曲比较不错，蔡依林的演唱也很专业。
-    #         这首歌表达了对回忆的怀念，是一首比较经典的作品。整体听起来很舒服，是一首值得推荐的好歌。"""
-    # ]
-    appraisals = ["""这段音频是一首流行抒情曲目。曲调为D#小调，节奏为118 BPM，采用了4/4拍子。这首歌曲以D#小调和大调和弦反复出现，营造出一种忧郁而又希望的氛围。此外，歌曲还包含了一些人声样本和弦乐，增加了音乐的表现力。总体而言，这首歌适合在需要表达复杂情感的时候聆听。"""]
 
-    # Randomly select an appraisal to test different novelty levels
-    return random.choice(appraisals)
+
+    processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct")
+    model = Qwen2AudioForConditionalGeneration.from_pretrained("/fs-computility/niuyazhe/lixueyan/zj/Qwen2-Audio/Qwen2-Audio-7B-Instruct", device_map="auto")
+
+    
+    user_prompt = f"根据提示词分析<|AUDIO|>。"
+    system_prompt=open("/fs-computility/niuyazhe/lixueyan/acapella/ReactionEvalBenchmark/prompt/model_appraisal_sysp.txt", "r").read()
+
+    conversation = [
+        {'role': 'system', 'content': system_prompt},
+        {'role': 'user', 'content': [
+            {"type": "audio", "audio_path": audio_path},
+            {"type": "text", "text": user_prompt},
+        ]},
+    ]
+
+    text = processor.apply_chat_template(conversation, add_generation_prompt=True, tokenize=False)
+    # 读取本地音频
+    audio, _ = librosa.load(audio_path, sr=processor.feature_extractor.sampling_rate)
+    audios = [audio]
+
+    inputs = processor(text=text, audios=audio, return_tensors="pt", padding=True)
+    # 获取模型所在设备
+    device = next(model.parameters()).device
+    # 将所有张量转到模型所在设备
+    for k, v in inputs.items():
+        if hasattr(v, "to"):
+            inputs[k] = v.to(device)
+
+    generate_ids = model.generate(**inputs, max_new_tokens=1024)
+    generate_ids = generate_ids[:, inputs["input_ids"].size(1):]
+
+    response = processor.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
+    return response
+
+#     appraisals = ["""告五人乐队的《爱人错过》是一首极具魔性又充满迷幻摇滚色彩的歌曲，从旋律到歌词都充满了独特的魅力。整首歌以“我肯定在几百年前就说过爱你”作为开篇，瞬间抓住听众的耳朵，既浪漫又带着一丝荒诞的宿命感。  
+# 音乐风格上，这首歌融合了迷幻摇滚与流行元素，节奏轻快却又不失迷离感，尤其是重复的旋律和洗脑的副歌，让人一听就忍不住跟着哼唱。编曲上，告五人采用了简洁但富有层次的配器，吉他和鼓点的搭配恰到好处，营造出一种既梦幻又略带戏谑的氛围。  
+# 歌词部分更是亮点十足，既有“走过 路过 没遇过 / 回头 转头 还是错”这样充满哲学意味的句子，又突然插入“你妈没有告诉你 / 撞到人要说对不起”这种无厘头的市井幽默，形成强烈的反差感，让人忍俊不禁却又莫名觉得合理。这种“小学生式”的直白表达，反而让歌曲更具记忆点和传播性，甚至成为网络热梗。  
+# 演唱方面，主唱犬青和云安的嗓音搭配极具辨识度，犬青的声线清澈透亮，而云安的演绎则带着一丝慵懒和痞气，两人的和声部分更是让整首歌的情感层次更加丰富。  
+# MV的视觉呈现也很有创意，以红、蓝、绿三原色为主调，讲述了一个“色盲”视角下的奇幻爱情故事，与歌曲主题完美呼应。  
+# 总的来说，《爱人错过》是一首兼具艺术性和流行度的作品，既有深度又足够“接地气”，难怪能成为告五人的代表作之一，并在各大音乐平台和短视频中疯狂传播。"""]
+
+#     return random.choice(appraisals)
 
 
 def main():

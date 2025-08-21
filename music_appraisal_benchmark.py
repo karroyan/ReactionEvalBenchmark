@@ -17,6 +17,7 @@ from typing import Dict, List, Optional, Any, Callable, Tuple
 from dataclasses import dataclass
 from pathlib import Path
 
+
 from audio_qa import AudioQABenchmark, run_benchmark, EvaluationResult
 from llm_evaluator import AudioLLMEvaluator, LLMEvaluationResult
 from precision_evaluator import AudioPrecisionEvaluator, PrecisionEvaluationResult
@@ -28,19 +29,19 @@ class ComprehensiveEvaluationResult:
     """Results from comprehensive music appraisal evaluation."""
     
     # Option-based QA results
-    qa_accuracy: float
-    qa_total_questions: int
-    qa_correct_answers: int
-    qa_detailed_results: List[Dict[str, Any]]
+    qa_accuracy: float = None
+    qa_total_questions: int = None
+    qa_correct_answers: int = None
+    qa_detailed_results: List[Dict[str, Any]] = None
 
     # Appraisal text
-    appraisal_text: str
+    appraisal_text: str = None
     
     # LLM completeness scoring results
-    completeness_score: float
-    completeness_max_score: float
-    completeness_details: Dict[str, Any]
-    completeness_assessment: str
+    completeness_score: float = None
+    completeness_max_score: float = None
+    completeness_details: Dict[str, Any] = None
+    completeness_assessment: str = None
     
     # Precision results
     precision_score: Optional[float] = None
@@ -51,6 +52,7 @@ class ComprehensiveEvaluationResult:
     novelty_details: Optional[Dict[str, Any]] = None
     
     # Overall metrics
+    subjective_score: Optional[float] = None
     overall_score: Optional[float] = None
     summary: Optional[str] = None
 
@@ -65,19 +67,20 @@ class MusicAppraisalBenchmark:
     
     def __init__(self, 
                  qa_data_path: str,
-                 llm_api_key: str,
-                 llm_base_url: str,
-                 song_details_path: Optional[str] = None,
-                 llm_model: str = "deepseek-v3"):
+                 llm_clients: Dict[str, Any],
+                 llm_models: Optional[List[str]] = None,
+                 model_weights: Optional[Dict[str, float]] = None,
+                 song_details_path: Optional[str] = None):
         """
         Initialize the comprehensive benchmark.
         
         Args:
             qa_data_path: Path to option-based QA data (JSONL)
-            llm_api_key: API key for LLM evaluator
-            llm_base_url: Base URL for LLM API
+            llm_clients: Dictionary mapping model names to their API clients (OpenAI, AzureOpenAI, Ark, etc.)
+            llm_models: List of model names to use. If None, uses all clients' keys
+            model_weights: Dictionary mapping model names to their weights for aggregation.
+                         If None, uses equal weights for all models.
             song_details_path: Path to song details data (JSONL)
-            llm_model: LLM model name to use
         """
         self.qa_data_path = qa_data_path
         self.song_details_path = song_details_path
@@ -87,23 +90,23 @@ class MusicAppraisalBenchmark:
         
         # Initialize LLM evaluator
         self.llm_evaluator = AudioLLMEvaluator(
-            api_key=llm_api_key,
-            base_url=llm_base_url,
-            model=llm_model
+            clients=llm_clients,
+            models=llm_models,
+            model_weights=model_weights
         )
         
         # Initialize precision evaluator
         self.precision_evaluator = AudioPrecisionEvaluator(
-            api_key=llm_api_key,
-            base_url=llm_base_url,
-            model=llm_model
+            clients=llm_clients,
+            models=llm_models,
+            model_weights=model_weights
         )
         
         # Initialize novelty evaluator
         self.novelty_evaluator = AudioNoveltyEvaluator(
-            api_key=llm_api_key,
-            base_url=llm_base_url,
-            model=llm_model
+            clients=llm_clients,
+            models=llm_models,
+            model_weights=model_weights
         )
         
         # Load song details if provided
@@ -158,7 +161,7 @@ class MusicAppraisalBenchmark:
             confidence_function=qa_confidence_function
         )
         
-        # 2. Evaluate completeness using LLM
+        # 2. Evaluate completeness using LLM and subjective evaluation
         completeness_results = []
         precision_results = []
         novelty_results = []
@@ -218,13 +221,18 @@ class MusicAppraisalBenchmark:
             for line in f:
                 song_data = json.loads(line)
                 audio_paths.append(song_data["audio_path"])
+        appraisal_text_list = []
         for audio_path in audio_paths: 
             try:
                 # Generate appraisal for each audio file
                 appraisal_text = appraisal_model_function(audio_path)
+                appraisal_text_list.append(appraisal_text)
                 
                 # Get song details if available
                 song_info = self.song_details.get(audio_path)
+
+                # Evaluate the subjective metric
+
                 
                 # Evaluate completeness
                 print("\n2. Evaluating appraisal completeness...")
@@ -304,7 +312,14 @@ class MusicAppraisalBenchmark:
             if enable_novelty_eval:
                 print("\n4. Novelty evaluation skipped (no ground truth data)")
         
-        # Calculate overall score
+        # Calculate score except qa
+        subjective_score = self._calculate_subjective_score(
+            avg_completeness_score / avg_completeness_max if avg_completeness_max > 0 else 0,
+            avg_precision_score,
+            avg_novelty_score
+        )
+
+        # # Calculate overall score
         overall_score = self._calculate_overall_score(
             qa_result.accuracy,
             avg_completeness_score / avg_completeness_max if avg_completeness_max > 0 else 0,
@@ -329,6 +344,7 @@ class MusicAppraisalBenchmark:
             precision_details=precision_details,
             novelty_score=avg_novelty_score,
             novelty_details=novelty_details,
+            subjective_score=subjective_score,
             overall_score=overall_score,
             summary=summary
         )
@@ -465,7 +481,11 @@ class MusicAppraisalBenchmark:
         weights = [w / total_weight for w in weights]
         
         return sum(score * weight for score, weight in zip(scores, weights))
-    
+
+    def _calculate_subjective_score(self, completeness_score: float, precision_score: float, novelty_score: float) -> float:
+        """Calculate subjective score combining all evaluation components."""
+        return (completeness_score + precision_score + novelty_score) / 3
+
     def _generate_summary(self, qa_result: EvaluationResult, completeness_score: float,
                          precision_score: Optional[float], novelty_score: Optional[float], overall_score: float) -> str:
         """Generate a summary of the evaluation results."""
@@ -490,6 +510,7 @@ class MusicAppraisalBenchmark:
                 'completeness_max_score': result.completeness_max_score,
                 'precision_score': result.precision_score,
                 'novelty_score': result.novelty_score,
+                'subjective_score': result.subjective_score,
                 'overall_score': result.overall_score,
                 'summary': result.summary
             },
@@ -578,10 +599,11 @@ class MusicAppraisalBenchmark:
 def run_comprehensive_benchmark(
     qa_model_function: Callable[[str, str, List[str]], str],
     appraisal_model_function: Callable[[str], str],
-    qa_data_path: str = "eval_benchmark/option_qa.jsonl",
-    song_details_path: str = "eval_benchmark/data/song_details.jsonl",
-    llm_api_key: str = "sk-dar2q3sf4dqtzikq",
-    llm_base_url: str = "https://cloud.infini-ai.com/maas/v1",
+    qa_data_path: str = "data/option_qa.jsonl",
+    song_details_path: str = "data/song_details.jsonl",
+    llm_clients: Optional[Dict[str, Any]] = None,
+    llm_models: Optional[List[str]] = None,
+    model_weights: Optional[Dict[str, float]] = None,
     output_path: Optional[str] = None,
     include_qa_confidence: bool = False,
     qa_confidence_function: Optional[Callable] = None,
@@ -596,8 +618,9 @@ def run_comprehensive_benchmark(
         appraisal_model_function: Function for generating appraisals
         qa_data_path: Path to QA data
         song_details_path: Path to song details
-        llm_api_key: LLM API key
-        llm_base_url: LLM API base URL
+        llm_clients: Dictionary mapping model names to their API clients
+        llm_models: List of model names to use
+        model_weights: Dictionary mapping model names to their weights
         output_path: Optional output file path
         include_qa_confidence: Whether to include QA confidence
         qa_confidence_function: QA confidence function
@@ -607,10 +630,36 @@ def run_comprehensive_benchmark(
     Returns:
         ComprehensiveEvaluationResult
     """
+    # Set up default clients if none provided
+    if llm_clients is None:
+        from openai import AzureOpenAI
+        llm_clients = {
+            "gpt-4o": AzureOpenAI(
+                azure_endpoint="https://normanhus-northcentralus.openai.azure.com/",
+                api_key="b4b35e8b3a194227a1bb485e4edfa21e",
+                api_version="2024-05-01-preview"
+            ),
+            # "doubao-seed-1-6-250615": Ark(
+            #     api_key = "e56db7eb-f0bf-4569-a327-3524d7765b63"
+            # ),
+            # "deepseek-v3-250324": Ark(
+            #     api_key = "e56db7eb-f0bf-4569-a327-3524d7765b63"
+            # )
+        }
+        llm_models = ["gpt-4o"]
+        
+        # Set default weights (can be adjusted based on model performance)
+        model_weights = {
+            "gpt-4o": 1.0,              # Base weight
+            # "doubao-seed-1-6-250615": 1.0,  # Equal weight
+            # "deepseek-v3-250324": 1.0       # Equal weight
+        }
+    
     benchmark = MusicAppraisalBenchmark(
         qa_data_path=qa_data_path,
-        llm_api_key=llm_api_key,
-        llm_base_url=llm_base_url,
+        llm_clients=llm_clients,
+        llm_models=llm_models,
+        model_weights=model_weights,
         song_details_path=song_details_path
     )
     
