@@ -68,7 +68,7 @@ class AudioPrecisionEvaluator:
         """Get the precision evaluation prompt."""
         return """### **System Prompt**  
 **角色**：你是一位专业的音乐事实核查员，负责验证音乐评价内容中的事实准确性。  
-**任务**：对比音乐评价文本与歌曲真实信息，判断评价中提到的具体事实是否正确。重点关注准确性，而非完整性。
+**任务**：对比音乐评价文本与歌曲真实信息，判断评价中提到的具体事实是否正确。评估需要按照四个主要维度进行。
 
 ### **评估标准**  
 - **只评估明确提及的事实信息**，不要求评价包含所有信息
@@ -249,31 +249,15 @@ class AudioPrecisionEvaluator:
         formatted_info = []
         
         field_map = {
-            "genre": "音乐风格",
-            "language": "语言",
-            "description": "歌曲描述",
-            "theme": "歌曲主题",
-            "music_style": "音乐风格细分",
-            "vocal_characteristics": "嗓音特点",
-            "style_or_atmosphere": "风格/氛围",
-            "arrangement_or_details": "编曲/细节",
-            "composition_or_structure": "作曲/结构",
-            "vocal_tone_description": "嗓音描述",
-            "emotional_expression": "情感表达",
-            "vocal_technique_awareness": "演唱技巧",
-            "singer_background_association": "歌手背景关联",
-            "song_background_or_cultural_association": "歌曲背景/文化关联",
-            "trend_or_subcultural_insight": "流行趋势/亚文化洞察"
+            "music_comprehension_song_analysis": "音乐理解与歌曲分析",
+            "music_comprehension_singer_performance": "演唱表现评价",
+            "song_or_singer_background_understanding": "背景理解与故事诠释",
+            "audience_resonance": "受众共鸣与市场潜力"
         }
 
         for key in field_map:
             if key in ground_truth:
                 formatted_info.append(f"{field_map[key]}:{ground_truth[key]}")
-
-        # 处理未在映射表中的其他字段
-        for key, value in ground_truth.items():
-            if key not in field_map and key != "audio_path":
-                formatted_info.append(f"{key}:{value}")
 
         return "\n".join(formatted_info) if formatted_info else "无详细信息"
     

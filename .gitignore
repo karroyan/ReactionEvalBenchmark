@@ -8,3 +8,4 @@ script/result*
 *.sh
 script/test_mmau.py
 script/model_to_test.py
+prompt/prompt_backup_.txt

@@ -38,6 +38,7 @@ class ModelHandler:
                 model=model_path,
                 max_model_len=8192,
                 max_num_seqs=5,
+                trust_remote_code=True,
                 limit_mm_per_prompt={
                     "audio": 1,
                 },
@@ -92,6 +93,7 @@ class ModelHandler:
             )
 
             print(f'response:{response.text}')
+            breakpoint()
             response_data = response.json()
             return response_data['choices'][0]['message']['content']
         else:
@@ -266,7 +268,7 @@ if __name__ == "__main__":
             appraisal_model_function=my_appraisal_model,
             qa_data_path="data/option_qa.jsonl",
             song_details_path="data/song_details.jsonl",
-            output_path=f"script/result_to_test/{model_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            output_path=f"script/result_deduplicated_new/{model_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         )
 
         print(f"Overall Score: {result.overall_score:.2%}")

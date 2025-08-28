@@ -1,36 +1,40 @@
-{"audio_path": "songs/倒带-蔡依林.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌词“你总是要我乖 慢慢计划将来”对应的段落是什么段落？", "options": ["verse", "chorus", "bridge", "pre-chorus"], "answer": "A"}
-{"audio_path": "songs/如果爱忘了-汪苏泷、单依纯.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲时间1:39到1:57对应的段落是什么段落？", "options": ["verse", "chorus", "bridge", "pre-chorus"], "answer": "C"}
-{"audio_path": "songs/我的秘密-GEM邓紫棋.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌词“你总是要我乖 慢慢计划将来”对应的段落是什么段落？", "options": ["verse", "chorus", "bridge", "pre-chorus"], "answer": "A"}
-{"audio_path":"songs/爱爱爱-方大同.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格", "options": ["Mandopop", "hip-hop", "EDM", "R&B/Soul","Rock","Folk","Indie","OST","Chinese Style"], "answer": "D"}
-{"audio_path":"songs/安和桥-宋冬野.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格", "options": ["Mandopop", "hip-hop", "EDM", "R&B/Soul","Rock","Folk","Indie","OST","Chinese Style"], "answer": "F"}
-{"audio_path":"songs/倔强-五月天.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格", "options": ["Mandopop", "hip-hop", "EDM", "R&B/Soul","Rock","Folk","Indie","OST","Chinese Style"], "answer": "E"}
-{"audio_path":"songs/红色高跟鞋-蔡健雅.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于哪个声部", "options": ["Mezzo-Soprano", "Lyric Soprano", "Lyric Tenor", "Bass-Baritone"], "answer": "A"}
-{"audio_path":"songs/香水百合-张韶涵.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于哪个声部", "options": ["Mezzo-Soprano", "Coloratura Soprano", "Lyric Tenor", "Bass-Baritone"], "answer": "B"}
-{"audio_path":"songs/11-GEM邓紫棋.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于以下哪种音色特质", "options": ["Brilliant Timbre", "Dark Timbre", "Metallic Twang", "Breathy Voice"], "answer": "C"}
-{"audio_path":"songs/单身情歌-林志炫.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术", "options": ["Resonance Dominant", "Vocal Fold Edge Vibration", "Growl/ Distortion", "Countertenor"], "answer": "A"}
-{"audio_path":"songs/2002年的第一场雪-刀郎.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术", "options": ["Resonance Dominant", "Vocal Fold Edge Vibration", "Growl/ Distortion", "Countertenor"], "answer": "B"}
-{"audio_path":"songs/离歌-信乐团.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术", "options": ["Resonance Dominant", "Vocal Fold Edge Vibration", "Growl/ Distortion", "Countertenor"], "answer": "B"}
-{"audio_path":"songs/安静-周杰伦.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪", "options": ["Melancholy", "Nostalgia", "Anxiety", "Euphoria","Resentment"], "answer": "A"}
-{"audio_path":"songs/词不达意-林忆莲.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪", "options": ["Melancholy", "Nostalgia", "Anxiety", "Euphoria","Resentment"], "answer": "B"}
-{"audio_path":"songs/私奔到月球-五月天_陈绮贞.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪", "options": ["Melancholy", "Nostalgia", "Anxiety", "Euphoria","Resentment"], "answer": "D"}
-{"audio_path":"songs/可惜没如果-林俊杰.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格", "options": ["Ballad", "EDM-Chinese Fusion", "Cantopop Urban", "Dialect Rock","Trap-Mandopop","Band Sound","Bedroom Folk","Cinematic Orchestration"], "answer": "A"}
-{"audio_path":"songs/富士山下-陈奕迅.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格", "options": ["Ballad", "EDM-Chinese Fusion", "Cantopop Urban", "Dialect Rock","Trap-Mandopop","Band Sound","Bedroom Folk","Cinematic Orchestration"], "answer": "C"}
-{"audio_path":"songs/花田错-王力宏-SonyEricssonW900i广告主题曲.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格", "options": ["Ballad", "EDM-Chinese Fusion", "Cantopop Urban", "Dialect Rock","Trap-Mandopop","Band Sound","Bedroom Folk","Cinematic Orchestration"], "answer": "H"}
-{"audio_path": "songs/不值得-梦飞船.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲中是否有outro段落？", "options": ["有", "没有"], "answer": "A"}
-{"audio_path": "songs/如果爱忘了-汪苏泷、单依纯.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲时间1分39秒到2分09秒对应的段落是什么段落？", "options": ["verse", "chorus", "bridge", "pre-chorus"], "answer": "C"}
-{"audio_path": "songs/我的秘密-GEM邓紫棋.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌词“你是我 你是我的秘密 我一直偷偷想着你”对应的段落是什么段落？", "options": ["verse 1", "verse 2", "chorus 2", "pre-chorus"], "answer": "D"}
-{"audio_path": "songs/不值得-梦飞船.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这是什么风格的歌曲？", "options": ["house", "soft rock", "r&b", "hip-hop"], "answer": "C"}
-{"audio_path": "songs/如果爱忘了-汪苏泷、单依纯.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这是什么风格的歌曲？", "options": ["urban pop", "classical", "country", "funk"], "answer": "A"}
-{"audio_path": "songs/我的秘密-GEM邓紫棋.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这是什么风格的歌曲？", "options": ["melody rap", "EDM", "r&b", "pop balled"], "answer": "D"}
-{"audio_path": "songs/不值得-梦飞船.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲49秒到1分52秒之间，哪一种配器最明显且起到关键作用？", "options": ["电子鼓点的double kick节奏", "失真吉他", "synth strings铺底", "高速钢琴琶音"], "answer": "C"}
-{"audio_path": "songs/如果爱忘了-汪苏泷、单依纯.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲49秒到1分52秒之间，和声主要位于哪个频段？", "options": ["低频段", "中频段", "高频段", "没有和声"], "answer": "B"}
-{"audio_path": "songs/我的秘密-GEM邓紫棋.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断从bridge开始，编曲通过哪种手法最明显的强化了动态，为进入最后的chorus做准备？", "options": ["drum fill", "vocal boost", "piano arpeggio", "filter sweep"], "answer": "A"}
-{"audio_path": "songs/不值得-梦飞船.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手在唱这首歌的时候年龄区间是多少？", "options": ["15-20", "25-30", "35-40", "45-50"], "answer": "B"}
-{"audio_path": "songs/如果爱忘了-汪苏泷、单依纯.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲中男生的声音是什么音色？", "options": ["warm", "bright", "dry", "airy"], "answer": "A"}
-{"audio_path": "songs/我的秘密-GEM邓紫棋.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手的声音质感是什么？", "options": ["粗糙感", "透亮感", "沙哑感", "细腻感"], "answer": "B"}
-{"audio_path": "songs/不值得-梦飞船.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手最想传递的情绪是什么？", "options": ["悔恨", "释然", "无奈", "愤怒"], "answer": "B"}
-{"audio_path": "songs/如果爱忘了-汪苏泷、单依纯.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断在bridge段落中，歌手的情绪强度变化是什么？", "options": ["持续上升至最高潮", "先下降后平稳", "先上升后略微下降再至最高潮", "保持同一强度"], "answer": "C"}
-{"audio_path": "songs/我的秘密-GEM邓紫棋.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断在歌曲1分03秒到1分44秒的副歌片段中，歌手传达了什么情绪？", "options": ["惊讶", "期待", "平静", "愉快"], "answer": "B"}
-{"audio_path": "songs/不值得-梦飞船.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断在歌曲2分46秒到3分26秒的片段中，歌手是如何将每句歌词的尾音自然连续到下一句开头的？", "options": ["断气停顿", "气声式的连音", "portamento滑音", "尾音停顿后用快速装饰音"], "answer": "C"}
-{"audio_path": "songs/如果爱忘了-汪苏泷、单依纯.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断女歌手在副歌语句的末尾常用哪种滑音技巧来增强情绪的延续性", "options": ["半音级滑音", "大跨度滑音", "连续滑音", "没有使用滑音"], "answer": "C"}
-{"audio_path": "songs/我的秘密-GEM邓紫棋.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲在副歌部分时，歌手使用了哪种唱法兼顾声音的通透和力度？", "options": ["混声", "假声", "胸声", "气声"], "answer": "A"}
+{"audio_path": "cut_songs/倒带-蔡依林_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这个段落最有可能属于哪一种音乐段落？", "options": ["A. verse", "B. chorus", "C. bridge", "D. pre-chorus"], "answer": "A"}
+{"audio_path": "cut_songs/如果爱忘了-汪苏泷、单依纯_5.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲中的段落转变在哪个时间段？", "options": ["A. 0-5秒", "B. 5-10秒", "C. 10-15秒", "D. 15-20秒"], "answer": "C"}
+{"audio_path": "cut_songs/我的秘密-GEM邓紫棋_2.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲中前半段属于什么段落？", "options": ["A. verse", "B. chorus", "C. bridge", "D. pre-chorus"], "answer": "C"}
+{"audio_path": "cut_songs/爱爱爱-方大同_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格", "options": ["A. Mandopop", "B. hip-hop", "C. EDM", "D. R&B/Soul","E. Rock","F. Folk","G. Indie","H. OST","I. Chinese Style"], "answer": "D"}
+{"audio_path": "cut_songs/安和桥-宋冬野_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格", "options": ["A. Mandopop", "B. hip-hop", "C. EDM", "D. R&B/Soul","E. Rock","F. Folk","G. Indie","H. OST","I. Chinese Style"], "answer": "F"}
+{"audio_path": "cut_songs/倔强-五月天_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲是什么风格", "options": ["A. Mandopop", "B. hip-hop", "C. EDM", "D. R&B/Soul","E. Rock","F. Folk","G. Indie","H. OST","I. Chinese Style"], "answer": "E"}
+{"audio_path": "cut_songs/红色高跟鞋-蔡健雅_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于哪个声部", "options": ["A. Mezzo-Soprano", "B. Lyric Soprano", "C. Lyric Tenor", "D. Bass-Baritone"], "answer": "A"}
+{"audio_path": "cut_songs/香水百合-张韶涵_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于哪个声部", "options": ["A. Mezzo-Soprano", "B. Coloratura Soprano", "C. Lyric Tenor", "D. Bass-Baritone"], "answer": "B"}
+{"audio_path": "cut_songs/11-GEM邓紫棋_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手属于以下哪种音色特质", "options": ["A. Brilliant Timbre", "B. Dark Timbre", "C. Metallic Twang", "D. Breathy Voice"], "answer": "C"}
+{"audio_path": "cut_songs/单身情歌-林志炫_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术", "options": ["A. Resonance Dominant", "B. Vocal Fold Edge Vibration", "C. Growl/ Distortion", "D. Countertenor"], "answer": "A"}
+{"audio_path": "cut_songs/2002年的第一场雪-刀郎_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术", "options": ["A. Resonance Dominant", "B. Vocal Fold Edge Vibration", "C. Growl/ Distortion", "D. Countertenor"], "answer": "B"}
+{"audio_path": "cut_songs/离歌-信乐团_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手使用了哪种发声技术", "options": ["A. Resonance Dominant", "B. Vocal Fold Edge Vibration", "C. Growl/ Distortion", "D. Countertenor"], "answer": "B"}
+{"audio_path": "cut_songs/安静-周杰伦_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪", "options": ["A. Melancholy", "B. Nostalgia", "C. Anxiety", "D. Euphoria","E. Resentment"], "answer": "A"}
+{"audio_path": "cut_songs/词不达意-林忆莲_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪", "options": ["A. Melancholy", "B. Nostalgia", "C. Anxiety", "D. Euphoria","E. Resentment"], "answer": "A"}
+{"audio_path": "cut_songs/私奔到月球-五月天_陈绮贞_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌在唱歌时是什么情绪", "options": ["A. Melancholy", "B. Nostalgia", "C. Anxiety", "D. Euphoria","E. Resentment"], "answer": "D"}
+{"audio_path": "cut_songs/可惜没如果-林俊杰_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格", "options": ["A. Ballad", "B. EDM-Chinese Fusion", "C. Cantopop Urban", "D. Dialect Rock","E. Trap-Mandopop","F. Band Sound","G. Bedroom Folk","H. Cinematic Orchestration"], "answer": "A"}
+{"audio_path": "cut_songs/富士山下-陈奕迅_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格", "options": ["A. Ballad", "B. EDM-Chinese Fusion", "C. Cantopop Urban", "D. Dialect Rock","E. Trap-Mandopop","F. Band Sound","G. Bedroom Folk","H. Cinematic Orchestration"], "answer": "C"}
+{"audio_path": "cut_songs/花田错-王力宏_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这首歌曲使用了哪种编曲风格", "options": ["A. Ballad", "B. EDM-Chinese Fusion", "C. Cantopop Urban", "D. Dialect Rock","E. Trap-Mandopop","F. Band Sound","G. Bedroom Folk","H. Cinematic Orchestration"], "answer": "H"}
+{"audio_path": "cut_songs/不值得-梦飞船_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这是什么风格的歌曲？", "options": ["A. house", "B. soft rock", "C. r&b", "D. hip-hop"], "answer": "C"}
+{"audio_path": "cut_songs/如果爱忘了-汪苏泷、单依纯_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这是什么风格的歌曲？", "options": ["A. urban pop", "B. classical", "C. country", "D. funk"], "answer": "A"}
+{"audio_path": "cut_songs/我的秘密-GEM邓紫棋_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这是什么风格的歌曲？", "options": ["A. melody rap", "B. EDM", "C. r&b", "D. pop balled"], "answer": "D"}
+{"audio_path": "cut_songs/不值得-梦飞船_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手在唱这首歌的时候年龄区间是多少？", "options": ["A. 15-20", "B. 25-30", "C. 35-40", "D. 45-50"], "answer": "B"}
+{"audio_path": "cut_songs/如果爱忘了-汪苏泷、单依纯_2.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲中男生的声音是什么音色？", "options": ["A. warm", "B. bright", "C. dry", "D. airy"], "answer": "A"}
+{"audio_path": "cut_songs/我的秘密-GEM邓紫棋_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手的声音质感是什么？", "options": ["A. 粗糙感", "B. 透亮感", "C. 沙哑感", "D. 细腻感"], "answer": "B"}
+{"audio_path": "cut_songs/不值得-梦飞船_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手最想传递的情绪是什么？", "options": ["A. 悔恨", "B. 释然", "C. 无奈", "D. 愤怒"], "answer": "B"}
+{"audio_path": "cut_songs/如果爱忘了-汪苏泷、单依纯_3.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断在bridge段落中，歌手的情绪强度变化是什么？", "options": ["A. 持续上升至最高潮", "B. 先下降后平稳", "C. 先上升后略微下降再至最高潮", "D. 保持同一强度"], "answer": "C"}
+{"audio_path": "cut_songs/我的秘密-GEM邓紫棋_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断在歌曲中，歌手传达了什么情绪？", "options": ["A. 惊讶", "B. 期待", "C. 平静", "D. 愉快"], "answer": "B"}
+{"audio_path": "cut_songs/不值得-梦飞船_2.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断在歌曲中，歌手是如何将每句歌词的尾音自然连续到下一句开头的？", "options": ["A. 断气停顿", "B. 气声式的连音", "C. portamento滑音", "D. 尾音停顿后用快速装饰音"], "answer": "C"}
+{"audio_path": "cut_songs/如果爱忘了-汪苏泷、单依纯_4.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断女歌手在副歌语句的末尾用哪种滑音技巧来增强情绪的延续性", "options": ["A. 半音级滑音", "B. 大跨度滑音", "C. 连续滑音", "D. 没有使用滑音"], "answer": "C"}
+{"audio_path": "cut_songs/我的秘密-GEM邓紫棋_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲在副歌部分时，歌手使用了哪种唱法兼顾声音的通透和力度？", "options": ["A. 混声", "B. 假声", "C. 胸声", "D. 气声"], "answer": "A"}
+{"audio_path": "cut_songs/如果爱忘了-汪苏泷、单依纯_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲中，和声主要位于哪个频段？", "options": ["A. 低频段", "B. 中频段", "C. 高频段", "D. 没有和声"], "answer": "B"}
+{"audio_path": "cut_songs/告五人-爱人错过_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲的bpm最接近以下哪个？", "options": ["A. 90", "B. 110", "C. 140", "D. 160"], "answer": "C"}
+{"audio_path": "cut_songs/告五人-爱人错过_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲的是什么调性？", "options": ["A. C# Major", "B. Ab Major", "C. F# Major", "D. D Major"], "answer": "A"}
+{"audio_path": "cut_songs/告五人-爱人错过_2.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲的伴奏中引导旋律的主要配器是？", "options": ["A. 铜管", "B. 键盘", "C. 合成器低频", "D. 吉他"], "answer": "D"}
+{"audio_path": "cut_songs/告五人-爱人错过_2.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断以下哪个配器是音乐中没有出现的？", "options": ["A. 键盘", "B. 小提琴", "C. 贝斯", "D. 吉他"], "answer": "B"}
+{"audio_path": "cut_songs/倔强-五月天_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断其节奏型是？", "options": ["A. 6/8", "B. 3/4", "C. 4/4", "D. 2/4"], "answer": "C"}
+{"audio_path": "cut_songs/倔强-五月天_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌曲的bpm最接近以下哪个？", "options": ["A. 90", "B. 110", "C. 140", "D. 160"], "answer": "D"}
+{"audio_path": "cut_songs/倔强-五月天_1.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断歌手的声音特质属于以下哪种？", "options": ["A. 清亮通透、少鼻音、偏假声", "B. 略沙哑、鼻腔共鸣明显、真声高音", "C. 低沉厚重、男低音走向", "D. 花腔多、宽幅颤音、R&B 风"], "answer": "B"}
+{"audio_path": "cut_songs/私奔到月球-五月天_陈绮贞_2.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这一段落的主要人声关系是？", "options": ["A. 无和声独唱", "B. 花腔即兴为主", "C. 齐唱/八度加倍为主", "D. 纯说唱问答"], "answer": "C"}
+{"audio_path": "cut_songs/私奔到月球-五月天_陈绮贞_3.mp3", "question": "你是一个专业且优秀的音乐评论员。当你收到一个音乐文件，判断这一段落的最先出现的主唱声音是？", "options": ["A. 男声先", "B. 女声先", "C. 齐唱先", "D. 纯器乐"], "answer": "A"}
